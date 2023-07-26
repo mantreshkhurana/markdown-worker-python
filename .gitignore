@@ -1,0 +1,8 @@
+# Miscellaneous
+.DS_Store
+
+# Python files
+__pycache__/
+dist/
+spyxpo.egg-info/
+build/
