@@ -4,5 +4,5 @@
 # Python files
 __pycache__/
 dist/
-spyxpo.egg-info/
+markdown_worker.egg-info/
 build/

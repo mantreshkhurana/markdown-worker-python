@@ -1,4 +1,4 @@
-from markdown_parser import MarkdownParser
+from markdown_worker import MarkdownParser
 
 if __name__ == "__main__":
     file_name = input("Enter the path of the Markdown file: ")

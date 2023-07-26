@@ -1,30 +1,30 @@
-# Markdown Parser
+# Markdown Worker
 
 This is a simple markdown parser written in Python. It can read, write and parse markdown files. It can read a particular header, write a particular header, and parse a particular header. It can also parse the entire file.
 
 ## Installation
 
 ```bash
-git clone https://github.com/mantreshkhurana/markdown-parser.git
-cd markdown-parser
+git clone https://github.com/mantreshkhurana/markdown-worker-python.git
+cd markdown-worker-python
 ```
 
 or
 
 ```bash
-pip install markdown-parser
+pip install markdown-worker
 ```
 
 or
 
 ```bash
-pip3 install markdown-parser
+pip3 install markdown-worker
 ```
 
 ## Usage
 
 ```python
-from markdown_parser import MarkdownParser
+from markdown_worker import MarkdownParser
 
 if __name__ == "__main__":
     file_name = input("Enter the path of the Markdown file: ")

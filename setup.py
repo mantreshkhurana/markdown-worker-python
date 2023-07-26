@@ -13,7 +13,7 @@ LONG_DESCRIPTION = 'A package that allows to parse, read and write markdown file
 
 # Setting up
 setup(
-    name="markdown-parser",
+    name="markdown_worker",
     version=VERSION,
     author="Mantresh Khurana",
     author_email="<mantreshkhurana@spyxpo.com>",
