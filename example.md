@@ -12,7 +12,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 - Usage:
 
   ```python
-  parser = MarkdownParser('example.md')  # Initialize parser with a specific Markdown file
+  parser = MarkdownParser('example.md')
   ```
 
 ### `read_markdown_file(self)`
@@ -23,7 +23,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  content = parser.read_markdown_file()  # Read the content of the file
+  content = parser.read_markdown_file()
   ```
 
 ### `extract_headers_and_paragraphs(self)`
@@ -50,7 +50,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  heading_content = parser.search_heading('Introduction')  # Replace 'Introduction' with the desired header title
+  heading_content = parser.search_heading('Introduction')
   ```
 
 ### `read_complete_file(self)`
@@ -74,7 +74,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  line_content = parser.read_line(5)  # Replace 5 with the desired line number
+  line_content = parser.read_line(5)
   ```
 
 ### `read_word(self, line_number, word_number)`
@@ -88,7 +88,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  word_content = parser.read_word(10, 3)  # Replace 10 with the desired line number and 3 with the desired word number
+  word_content = parser.read_word(10, 3)
   ```
 
 ### `read_character(self, line_number, word_number, character_number)`
@@ -103,7 +103,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  character = parser.read_character(15, 2, 4)  # Replace 15 with the desired line number, 2 with the desired word number, and 4 with the desired character number
+  character = parser.read_character(15, 2, 4)
   ```
 
 ### `read_character_from_line(self, line_number, character_number)`
@@ -117,7 +117,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  character = parser.read_character_from_line(20, 10)  # Replace 20 with the desired line number and 10 with the desired character number
+  character = parser.read_character_from_line(20, 10)
   ```
 
 ### `read_character_from_file(self, character_number)`
@@ -130,7 +130,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  character = parser.read_character_from_file(50)  # Replace 50 with the desired character number
+  character = parser.read_character_from_file(50)
   ```
 
 ### `read_word_from_line(self, line_number, word_number)`
@@ -144,7 +144,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser('example.md')
-  word_content = parser.read_word_from_line(25, 5)  # Replace 25 with the desired line number and 5 with the desired word number
+  word_content = parser.read_word_from_line(25, 5)
   ```
 
 ### `markdown_to_html(self, markdown_text, output_filename=None)`
@@ -158,7 +158,7 @@ The `MarkdownParser` class provides various methods to parse and manipulate Mark
 
   ```python
   parser = MarkdownParser()
-  html_output = parser.markdown_to_html('# Heading 1\n\n**Bold Text**')  # Replace the example Markdown with the desired content
+  html_output = parser.markdown_to_html('# Heading 1\n\n**Bold Text**')
   ```
 
 Note: To use most of the functions that read from the Markdown file (e.g., `read_line`, `read_word`, etc.), make sure to initialize the `MarkdownParser` instance with a valid Markdown file using the `filename` parameter. Otherwise, the `markdown_text` will be an empty string.
