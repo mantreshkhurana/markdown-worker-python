@@ -5,6 +5,7 @@ This is a simple markdown parser written in Python. It can read, write and parse
 ## Installation
 
 ```bash
+# use these commands to install the package source code to your local machine
 git clone https://github.com/mantreshkhurana/markdown-worker-python.git
 cd markdown-worker-python
 ```
@@ -22,6 +23,8 @@ pip3 install markdown-worker
 ```
 
 ## Usage
+
+I provided a `example.md` file in the repository. You can use that to test the program, it contains all the [documentation](https://github.com/mantreshkhurana/markdown-worker-python/blob/stable/example.md) of the program.
 
 ```python
 from markdown_worker import MarkdownParser

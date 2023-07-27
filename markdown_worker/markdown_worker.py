@@ -1,12 +1,12 @@
 import re
 
 class MarkdownParser:
-    def __init__(self, filename):
+    def __init__(self, filename=None):
         self.filename = filename
-        self.markdown_text = self.read_markdown_file()
+        self.markdown_text = self.read_markdown_file() if filename else ""
 
     def read_markdown_file(self):
-        if self.filename.endswith('.md'):
+        if self.filename and self.filename.endswith('.md'):
             with open(self.filename, 'r', encoding='utf-8') as file:
                 markdown_text = file.read()
                 return markdown_text
@@ -116,3 +116,25 @@ class MarkdownParser:
                 return "Word number out of range."
         else:
             return "Line number out of range."
+
+    def markdown_to_html(self, markdown_text, output_filename=None):
+        markdown_text = re.sub(r'^(#+)(.*?)$', r'<h\1>\2</h\1>', markdown_text, flags=re.MULTILINE)
+
+        markdown_text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', markdown_text)
+
+        markdown_text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', markdown_text)
+
+        markdown_text = re.sub(r'^\*\s(.*)$', r'<li>\1</li>', markdown_text, flags=re.MULTILINE)
+        markdown_text = re.sub(r'(<li>.*<\/li>)+', r'<ul>\g<0></ul>', markdown_text)
+
+        markdown_text = re.sub(r'^\d+\.\s(.*)$', r'<li>\1</li>', markdown_text, flags=re.MULTILINE)
+        markdown_text = re.sub(r'(<li>.*<\/li>)+', r'<ol>\g<0></ol>', markdown_text)
+
+        markdown_text = re.sub(r'`([^`]+)`', r'<code>\1</code>', markdown_text)
+
+        if output_filename:
+            with open(output_filename, 'w', encoding='utf-8') as output_file:
+                output_file.write(markdown_text)
+
+        return markdown_text
+

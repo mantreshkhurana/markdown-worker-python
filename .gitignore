@@ -6,3 +6,6 @@ __pycache__/
 dist/
 markdown_worker.egg-info/
 build/
+
+# HTML files
+*.html
