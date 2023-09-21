@@ -29,7 +29,7 @@ I provided a `example.md` file in the repository. You can use that to test the p
 ```python
 from markdown_worker import MarkdownParser
 
-file_name = input("Enter the path of the Markdown file: ")
+file_name = input("Path of the Markdown file: ")
 parser = MarkdownParser(file_name)
 
 heading_to_search = input("Enter the heading to search: ")
